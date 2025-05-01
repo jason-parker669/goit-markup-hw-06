@@ -1,0 +1,87 @@
+:root {
+  /* === Layout === */
+
+  --image-height-portfolio: 300px;
+
+  /* === Colors === */
+
+  --color-primary-brand: #4d5ae5; /* CTAs, Focused, Active states, Links*/
+  --color-pressed-state: #404bbf; /* CTAs*/
+  --color-dark: #2e2f42; /* Overlays, Shadows, Headings*/
+  --color-success: #31d0aa; /* Valid fields, success messages*/
+  --color-text: #434455; /* Body text*/
+  --color-subtle-text: #8e8f99; /* Helper text, Deemphesized text*/
+  --color-accent: #e7e9fc; /* Accent color, Hairlines, Subtle backgrounds */
+  --color-light: #f4f4fd; /* Light mode backgrounds, Light modde Dialogs/alerts */
+  --color-modal-overlay: rgba(46, 47, 66, 0.4); /* Overlay*/
+  --color-hero-background: rgba(46, 47, 66, 0.7); /* Hero image background */
+  --color-white-background: #fff; /* Header, team card, backgroundd*/
+  --color-modal-background: #fcfcfc;
+
+  /* === Font families === */
+  --font-roboto: "Roboto", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+
+  /* === Font weights === */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  /* === Semantic mappings === */
+  --font-heading: var(--font-roboto);
+  --font-body: var(--font-roboto);
+  --font-logo: var(--font-raleway);
+
+  --font-weight-heading: var(--weight-bold);
+  --font-weight-body: var(--weight-regular);
+  --font-weight-subheading: var(--weight-medium);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  background-color: var(--color-white-background);
+  font-style: normal;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}

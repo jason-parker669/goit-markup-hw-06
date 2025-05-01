@@ -1,0 +1,128 @@
+.theme-header .effects-link,
+.theme-header .effects-address {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-header .effects-link:hover,
+.theme-header .effects-link:focus,
+.theme-header .effects-address:hover,
+.theme-header .effects-address:focus {
+  color: var(--color-pressed-state);
+}
+
+.theme-header .effects-link::after {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-header .effects-link:hover::after,
+.theme-header .effects-link:focus::after {
+  opacity: 1;
+}
+
+.effects-button,
+.effects-social-icon,
+.effects-footer-button {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.effects-button:hover,
+.effects-button:focus,
+.effects-social-icon:hover,
+.effects-social-icon:focus,
+.effects-footer-button:hover,
+.effects-footer-button:focus {
+  background-color: var(--color-pressed-state);
+}
+
+.theme-footer .effects-social-icon:hover,
+.theme-footer .effects-social-icon:focus {
+  background-color: var(--color-success);
+}
+
+.effects-portfolio-card {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-portfolio-card:hover,
+.effects-portfolio-card:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  cursor: pointer;
+}
+
+.effects-card-cover {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-portfolio-card:hover .effects-card-cover {
+  transform: translateY(0%);
+}
+
+.effects-modal-overlay {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-modal-window {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-button-close {
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-button-close:hover .effects-icon,
+.theme-button-close:focus .effects-icon {
+  fill: var(--color-primary-brand);
+}
+
+.effects-button-close:hover,
+.effects-button-close:focus {
+  background-color: var(--color-pressed-state);
+  border: none;
+}
+
+.effects-button-close:hover .effects-icon,
+.effects-button-close:focus .effects-icon {
+  fill: var(--color-white-background);
+}
+
+.effects-input-field {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-input-field:hover,
+.effects-input-field:focus {
+  border-color: var(--color-primary-brand);
+}
+
+.theme-input-container:focus-within .effects-icon {
+  fill: var(--color-primary-brand);
+}
+
+.effects-textarea {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effects-textarea:focus {
+  border-color: var(--color-primary-brand);
+}
+
+.theme-label .effects-checkbox-container {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type="checkbox"]:checked ~ .theme-label .effects-checkbox-container {
+  background-color: var(--color-pressed-state);
+  border: none;
+  fill: var(--color-light);
+}

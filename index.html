@@ -21,7 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles-default.css" />
+    <link rel="stylesheet" href="./css/styles-theme.css" />
+    <link rel="stylesheet" href="./css/styles-effects.css" />
+    <link rel="stylesheet" href="./css/styles-layout.css" />
     <title>Web Studio</title>
   </head>
 
@@ -66,10 +69,19 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="theme-button layout-button">
+          <svg
+            class="theme-icon layout-icon effects-icon"
+            width="24"
+            height="24"
+          >
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
-    <main>
+    <main class="hidden">
       <!-- #region HERO BANNER  -->
       <section class="theme-hero layout-hero">
         <div class="container">
@@ -585,7 +597,7 @@
       <!-- #endregion PORTFOLIO -->
     </main>
 
-    <footer class="theme-footer layout-footer">
+    <footer class="theme-footer layout-footer hidden">
       <div class="container">
         <div class="layout-container-cta">
           <a href="./index.html" class="layout-logo theme-logo"
@@ -656,7 +668,9 @@
       </div>
     </footer>
     <!-- #region MODAL WINDOW -->
-    <div class="theme-modal-overlay layout-modal-overlay effects-modal-overlay">
+    <div
+      class="theme-modal-overlay layout-modal-overlay effects-modal-overlay hidden"
+    >
       <div class="theme-modal-window layout-modal-window effects-modal-window">
         <button
           type="button"
