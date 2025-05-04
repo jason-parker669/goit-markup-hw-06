@@ -18,6 +18,14 @@
 .theme-header .effects-link:focus::after {
   opacity: 1;
 }
+.effects-mobile-menu {
+  pointer-events: none;
+}
+.effects-is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
 .effects-button,
 .effects-social-icon,
@@ -59,7 +67,8 @@
   transform: translateY(0%);
 }
 
-.effects-modal-overlay {
+.effects-modal-overlay,
+.effects-is-open {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

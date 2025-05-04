@@ -30,11 +30,12 @@
 
   <body>
     <header class="theme-header layout-header">
-      <div class="container">
+      <div class="theme-header-container layout-header-container">
+        <a href="./index.html" class="theme-logo layout-logo"
+          >web<span class="theme-logo-accent">Studio</span></a
+        >
+
         <nav class="theme-header-nav layout-header-nav">
-          <a href="./index.html" class="theme-logo layout-logo"
-            >web<span class="theme-logo-accent">Studio</span></a
-          >
           <ul class="layout-nav-menu">
             <li>
               <a href="./index.html" class="theme-link layout-link effects-link"
@@ -53,7 +54,8 @@
             </li>
           </ul>
         </nav>
-        <address class="theme-body-text">
+
+        <address class="theme-address-section layout-address-section">
           <ul class="layout-address-list">
             <li>
               <a
@@ -69,6 +71,7 @@
             </li>
           </ul>
         </address>
+
         <button type="button" class="theme-button layout-button">
           <svg
             class="theme-icon layout-icon effects-icon"
@@ -78,6 +81,97 @@
             <use href="./images/icons.svg#icon-burger-menu"></use>
           </svg>
         </button>
+      </div>
+
+      <div
+        class="theme-mobile-menu layout-mobile-menu effects-mobile-menu effects-is-open"
+      >
+        <div class="layout-mobile-container">
+          <button
+            type="button"
+            class="theme-button-close layout-button-close effects-button-close"
+          >
+            <svg
+              class="theme-icon layout-icon effects-icon"
+              width="8"
+              height="8"
+            >
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <nav class="theme-header-nav layout-header-nav">
+            <ul class="layout-nav-menu">
+              <li>
+                <a
+                  href="./index.html"
+                  class="theme-link layout-link effects-link"
+                  >Studio</a
+                >
+              </li>
+              <li>
+                <a href="" class="theme-link layout-link effects-link"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="" class="theme-link layout-link effects-link"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <address class="theme-address-section layout-address-section">
+            <ul class="layout-address-list">
+              <li>
+                <a
+                  href="tel:+110001111111"
+                  class="theme-address effects-address"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="theme-address effects-address"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <ul class="theme-social-links layout-social-links">
+            <li class="layout-social-link">
+              <a href="" class="theme-link layout-link effects-social-icon">
+                <svg class="theme-icon layout-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="layout-social-link">
+              <a href="" class="theme-link layout-link effects-social-icon">
+                <svg class="theme-icon layout-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="layout-social-link">
+              <a href="" class="theme-link layout-link effects-social-icon">
+                <svg class="theme-icon layout-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="layout-social-link">
+              <a href="" class="theme-link layout-link effects-social-icon">
+                <svg class="theme-icon layout-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 

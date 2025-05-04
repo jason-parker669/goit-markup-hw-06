@@ -1,38 +1,3 @@
-:root {
-  /* === Colors === */
-
-  --color-primary-brand: #4d5ae5; /* CTAs, Focused, Active states, Links*/
-  --color-pressed-state: #404bbf; /* CTAs*/
-  --color-dark: #2e2f42; /* Overlays, Shadows, Headings*/
-  --color-success: #31d0aa; /* Valid fields, success messages*/
-  --color-text: #434455; /* Body text*/
-  --color-subtle-text: #8e8f99; /* Helper text, Deemphesized text*/
-  --color-accent: #e7e9fc; /* Accent color, Hairlines, Subtle backgrounds */
-  --color-light: #f4f4fd; /* Light mode backgrounds, Light modde Dialogs/alerts */
-  --color-modal-overlay: rgba(46, 47, 66, 0.4); /* Overlay*/
-  --color-hero-background: rgba(46, 47, 66, 0.7); /* Hero image background */
-  --color-white-background: #fff; /* Header, team card, backgroundd*/
-  --color-modal-background: #fcfcfc;
-
-  /* === Font families === */
-  --font-roboto: "Roboto", sans-serif;
-  --font-raleway: "Raleway", sans-serif;
-
-  /* === Font weights === */
-  --weight-regular: 400;
-  --weight-medium: 500;
-  --weight-bold: 700;
-
-  /* === Semantic mappings === */
-  --font-heading: var(--font-roboto);
-  --font-body: var(--font-roboto);
-  --font-logo: var(--font-raleway);
-
-  --font-weight-heading: var(--weight-bold);
-  --font-weight-body: var(--weight-regular);
-  --font-weight-subheading: var(--weight-medium);
-}
-
 .theme-section-heading {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-heading);
@@ -94,9 +59,8 @@
   color: var(--color-dark);
 }
 
-.theme-header .theme-link {
-  position: relative;
-  color: var(--color-pressed-state);
+.theme-header-nav .theme-link {
+  color: var(--color-dark);
 }
 
 .theme-header .theme-link::after {
@@ -112,8 +76,48 @@
   pointer-events: none;
 }
 
-.theme-address {
+.theme-header-container .theme-address {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
+  font-style: normal;
   color: var(--color-text);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+@media screen and (min-width: 1158px) {
+  .theme-header-container .theme-address {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+}
+
+.theme-mobile-menu {
+  background-color: var(--color-white-background);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.theme-mobile-menu .theme-address {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-subheading);
+  font-style: normal;
+  color: var(--color-text);
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.theme-mobile-menu .theme-header-nav .theme-link {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-style: normal;
+  color: var(--color-text);
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
 }
 
 .theme-hero {
@@ -152,9 +156,10 @@
 }
 
 .theme-header .theme-button {
+  line-height: 0;
   background-color: transparent;
   color: currentColor;
-  border-radius: none;
+  border-radius: 0;
   border: none;
   box-shadow: none;
 }
@@ -184,6 +189,7 @@
 .theme-social-links .theme-link {
   border-radius: 50%;
   background-color: var(--color-primary-brand);
+  line-height: 0;
 }
 
 .theme-footer {
@@ -254,6 +260,11 @@
   background-color: var(--color-accent);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  line-height: 0;
+}
+
+.theme-mobile-menu .theme-button-close {
+  background-color: transparent;
 }
 
 .theme-modal-heading {
