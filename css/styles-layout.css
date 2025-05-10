@@ -10,7 +10,7 @@
   display: inline-block;
 }
 
-/* the layout of the main button. Used in the Hero Section and modal window */
+/* The main button. Used in the Hero Section and modal window */
 .layout-button-main {
   min-width: 169px;
   height: 56px;
@@ -21,9 +21,17 @@
   justify-content: center;
 }
 
+/* headings of sections */
 .layout-heading-section {
   text-align: center;
   margin-bottom: 72px;
+}
+
+/* the default flex layout for a card group. Mobile default used. Used in the Team section and Portfolio */
+.layout-card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 /* #endregion COMMON LAYOUTS */
@@ -337,10 +345,13 @@
 /* #endregion WHY US */
 
 /* #region TEAM */
+
+/*centers the container insidde the section */
 .layout-team {
   margin: 0 auto;
 }
 
+/* sets the content area */
 .layout-team .layout-container {
   max-width: 320px;
   margin: 0 auto;
@@ -348,35 +359,31 @@
   text-align: center;
 }
 
-.layout-team-members {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 72px;
-}
-
-.layout-team-members .layout-box {
+/* The width of each member card will depend on the resolution. Done for wrapping*/
+.layout-team .layout-box {
   width: calc((100%) / 1);
 }
 
+/* The layout of the area under the team member card photo */
 .layout-team .layout-image-subscript {
   padding: 32px 0;
   text-align: center;
 }
 
-.layout-image-subscript .layout-heading {
-  margin-bottom: 8px;
-}
-
+/* creating space under the card heading and description */
+.layout-image-subscript .layout-heading,
 .layout-image-subscript .layout-body-text {
   margin-bottom: 8px;
 }
 
+/* the layout of the social links in the cards*/
 .layout-team .layout-social-links {
   display: flex;
   gap: 24px;
   justify-content: center;
 }
 
+/* The layout of an individual social link. The icon inside is centered with flex*/
 .layout-social-links .layout-link {
   display: flex;
   justify-content: center;
@@ -386,36 +393,261 @@
 }
 
 /*--------------tablet---------------------*/
+
+/* container layout*/
 @media screen and (min-width: 720px) {
   .layout-team .layout-container {
     max-width: 720px;
     padding: 96px 108px;
   }
 
-  .layout-team-members {
+  /*setting the team cards layout in tablet*/
+  .layout-team .layout-card-group {
     column-gap: 24px;
     row-gap: 64px;
   }
-
-  .layout-team-members .layout-box {
+  /* adjusting card width to ensure proper alignment in tablet*/
+  .layout-team .layout-box {
     width: calc((100% - 24px) / 2);
   }
 }
 
 /*--------------desktop------------------*/
+/* container layout*/
 @media screen and (min-width: 1158px) {
   .layout-team .layout-container {
     max-width: 1158px;
     padding: 120px 15px;
   }
 
-  .layout-team-members {
+  /*setting the team cards layout in desktop*/
+  .layout-team .layout-card-group {
     gap: 24px;
   }
 
-  .layout-team-members .layout-box {
+  /* adjusting card width to ensure proper alignment in desktop*/
+  .layout-team .layout-box {
     width: calc((100% - 3 * 24px) / 4);
   }
 }
 
 /* #endregion TEAM*/
+
+/* #region PORTFOLIO */
+
+/*centers the container insidde the section */
+.layout-portfolio {
+  margin: 0 auto;
+}
+
+/* the picture-slide*/
+.layout-portfolio .layout-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+/* The text of the picture slide*/
+.layout-overlay .layout-body-text {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 40px 32px;
+  transform: translateY(100%);
+  text-align: left;
+}
+/* The content area of heading and subheading under the image*/
+.layout-portfolio .layout-image-subscript {
+  padding: 32px 16px;
+  text-align: left;
+}
+
+/* removing any margins for the subheading as there is no social icons section beneath them which would require a margin*/
+.layout-portfolio .layout-body-text {
+  margin: 0;
+}
+
+/*----------------mobile--------------------*/
+/* sets the content area */
+.layout-portfolio .layout-container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 96px 16px;
+  text-align: center;
+}
+
+.layout-portfolio .layout-box {
+  width: calc((100%) / 1);
+}
+
+/*-----------------tablet----------------*/
+@media screen and (min-width: 720px) {
+  .layout-portfolio .layout-container {
+    max-width: 720px;
+  }
+
+  .layout-portfolio .layout-card-group {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .layout-portfolio .layout-box {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+/*----------------desktop----------------*/
+
+@media screen and (min-width: 1158px) {
+  .layout-portfolio .layout-container {
+    max-width: 1158px;
+    padding: 120px 15px;
+  }
+
+  .layout-potfolio .layout-card-group {
+    row-gap: 48px;
+  }
+
+  .layout-portfolio .layout-box {
+    width: calc((100% - 48px) / 3);
+  }
+}
+
+/* #endregion PORTFOLIO */
+
+/* #region FOOTER */
+
+/*centering the footer container*/
+.layout-footer {
+  margin: 0 auto;
+}
+
+/*--------------------mobile--------------*/
+.layout-footer .layout-container {
+  max-width: 320px;
+  padding: 96px 16px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+
+.layout-container-cta {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* centering the logo for the mobile version */
+.layout-container-cta .layout-logo {
+  align-self: center;
+}
+
+.layout-footer .layout-container-social {
+  max-width: 208px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.layout-footer .layout-container-form {
+  max-width: 288px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.layout-footer-heading {
+  padding: 0;
+  align-self: center;
+}
+
+.layout-footer .layout-social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.layout-footer-subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* The input window for the email */
+.layout-footer-subscribe .layout-input {
+  padding-left: 16px; /*Moves placeholder text to the right*/
+  height: 40px;
+  width: 100%;
+}
+
+/*the subscribe button */
+.layout-button-footer {
+  align-self: center; /*ensures the button is centered in mobile version vertically. Has no effect in tablet, desktop */
+  width: 165px;
+  height: 40px;
+  border: none;
+  padding: 0;
+  display: flex; /* used to center the contents within*/
+  align-items: center;
+  justify-content: center;
+}
+
+/* allows space between airplane icon and text */
+.layout-button-footer .layout-icon {
+  margin-left: 16px;
+}
+
+/*-------------------tablet--------------*/
+@media screen and (min-width: 720px) {
+  .layout-footer .layout-container {
+    max-width: 720px;
+    padding: 96px 108px;
+    justify-content: flex-start;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .layout-container-cta {
+    max-width: 264px;
+  }
+
+  /* aligning the logo left for tablet+ */
+  .layout-container-cta .layout-logo,
+  .layout-footer-heading {
+    align-self: flex-start;
+  }
+
+  .layout-footer .layout-container-form {
+    max-width: 453px;
+  }
+  .layout-footer-subscribe {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .layout-footer-subscribe .layout-input {
+    width: 264px;
+  }
+}
+
+/*-------------------desktop--------------*/
+@media screen and (min-width: 1158px) {
+  .layout-footer .layout-container {
+    max-width: 1158px;
+    padding: 150px 15px;
+    gap: 0; /*removing gap to set distancing manually via margins */
+  }
+
+  .layout-container-cta {
+    margin-right: 120px;
+  }
+
+  .layout-footer .layout-container-social {
+    margin-right: 80px;
+  }
+}

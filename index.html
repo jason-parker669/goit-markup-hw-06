@@ -183,7 +183,7 @@
           </h1>
           <button
             type="button"
-            class="theme-button layout-button-main effects-button"
+            class="theme-button-main layout-button-main effects-button"
           >
             Order Service
           </button>
@@ -255,7 +255,7 @@
       <section class="theme-team layout-team">
         <div class="layout-container">
           <h2 class="theme-heading-section layout-heading-section">Our Team</h2>
-          <ul class="layout-team-members">
+          <ul class="layout-card-group">
             <li class="theme-box layout-box">
               <img
                 src="./images/team1.jpg"
@@ -547,17 +547,20 @@
       </section>
       <!-- #endregion TEAM -->
       <!-- #region PORTFOLIO -->
-      <section class="layout-portfolio hidden">
-        <div class="container">
-          <h2 class="layout-section-heading theme-section-heading">
+      <section class="theme-portfolio layout-portfolio">
+        <div class="layout-container">
+          <h2 class="theme-heading-section layout-heading-section">
             Our Portfolio
           </h2>
-          <ul class="layout-portfolio-cards">
-            <li class="layout-portfolio-card effects-portfolio-card">
+          <ul class="layout-card-group">
+            <li class="theme-box layout-box effects-box">
               <div class="layout-overlay">
                 <img
-                  class="layout-image"
                   src="./images/banking-app.jpg"
+                  srcset="
+                    ./images/banking-app.jpg    1x,
+                    ./images/banking-app@x2.jpg 2x
+                  "
                   alt="Banking application user interface"
                 />
                 <p class="theme-body-text layout-body-text effects-card-cover">
@@ -567,17 +570,18 @@
                 </p>
               </div>
               <div class="theme-image-subscript layout-image-subscript">
-                <h3 class="layout-small-heading theme-small-heading">
-                  Banking App
-                </h3>
+                <h3 class="theme-heading layout-heading">Banking App</h3>
                 <p class="theme-body-text layout-body-text">App</p>
               </div>
             </li>
-            <li class="layout-portfolio-card effects-portfolio-card">
+            <li class="theme-box layout-box effects-box">
               <div class="layout-overlay">
                 <img
-                  class="layout-image"
                   src="./images/cashless-payment.jpg"
+                  srcset="
+                    ./images/cashless-payment.jpg    1x,
+                    ./images/cashless-payment@x2.jpg 2x
+                  "
                   alt="A payment being made by phone"
                 />
 
@@ -588,17 +592,18 @@
                 </p>
               </div>
               <div class="theme-image-subscript layout-image-subscript">
-                <h3 class="layout-small-heading theme-small-heading">
-                  Cashless Payment
-                </h3>
+                <h3 class="theme-heading layout-heading">Cashless Payment</h3>
                 <p class="theme-body-text layout-body-text">Marketing</p>
               </div>
             </li>
-            <li class="layout-portfolio-card effects-portfolio-card">
+            <li class="theme-box layout-box effects-box">
               <div class="layout-overlay">
                 <img
-                  class="layout-image"
                   src="./images/meditation.jpg"
+                  srcset="
+                    ./images/meditation.jpg    1x,
+                    ./images/meditation@x2.jpg 2x
+                  "
                   alt="A computer and a phone with thoughtful phrases"
                 />
 
@@ -609,17 +614,18 @@
                 </p>
               </div>
               <div class="theme-image-subscript layout-image-subscript">
-                <h3 class="layout-small-heading theme-small-heading">
-                  Meditation App
-                </h3>
+                <h3 class="theme-heading layout-heading">Meditation App</h3>
                 <p class="theme-body-text layout-body-text">App</p>
               </div>
             </li>
-            <li class="layout-portfolio-card effects-portfolio-card">
+            <li class="theme-box layout-box effects-box">
               <div class="layout-overlay">
                 <img
-                  class="layout-image"
                   src="./images/taxi-service.jpg"
+                  srcset="
+                    ./images/taxi-service.jpg    1x,
+                    ./images/taxi-service@x2.jpg 2x
+                  "
                   alt="A driver in a car"
                 />
 
@@ -630,17 +636,18 @@
                 </p>
               </div>
               <div class="theme-image-subscript layout-image-subscript">
-                <h3 class="layout-small-heading theme-small-heading">
-                  Taxi Service
-                </h3>
+                <h3 class="theme-heading layout-heading">Taxi Service</h3>
                 <p class="theme-body-text layout-body-text">Marketing</p>
               </div>
             </li>
-            <li class="layout-portfolio-card effects-portfolio-card">
+            <li class="theme-box layout-box effects-box">
               <div class="layout-overlay">
                 <img
-                  class="layout-image"
                   src="./images/screen-illustrations.jpg"
+                  srcset="
+                    ./images/screen-illustrations.jpg    1x,
+                    ./images/screen-illustrations@x2.jpg 2x
+                  "
                   alt="Beautiful illustrations on phones"
                 />
 
@@ -651,17 +658,20 @@
                 </p>
               </div>
               <div class="theme-image-subscript layout-image-subscript">
-                <h3 class="layout-small-heading theme-small-heading">
+                <h3 class="theme-heading layout-heading">
                   Screen Illustrations
                 </h3>
                 <p class="theme-body-text layout-body-text">Design</p>
               </div>
             </li>
-            <li class="layout-portfolio-card effects-portfolio-card">
+            <li class="theme-box layout-box effects-box">
               <div class="layout-overlay">
                 <img
-                  class="layout-image"
                   src="./images/online-courses.jpg"
+                  srcset="
+                    ./images/online-courses.jpg    1x,
+                    ./images/online-courses@x2.jpg 2x
+                  "
                   alt="A happy woman studying on her phone"
                 />
 
@@ -671,10 +681,8 @@
                   · Cloud Storage App
                 </p>
               </div>
-              <div class="layout-image-subscript">
-                <h3 class="layout-small-heading theme-small-heading">
-                  Online Courses
-                </h3>
+              <div class="theme-image-subscript layout-image-subscript">
+                <h3 class="theme-heading layout-heading">Online Courses</h3>
                 <p class="theme-body-text layout-body-text">Marketing</p>
               </div>
             </li>
@@ -684,8 +692,8 @@
       <!-- #endregion PORTFOLIO -->
     </main>
 
-    <footer class="theme-footer layout-footer hidden">
-      <div class="container">
+    <footer class="theme-footer layout-footer">
+      <div class="layout-container">
         <div class="layout-container-cta">
           <a href="./index.html" class="layout-logo theme-logo"
             >Web<span class="theme-logo-accent">Studio</span></a
@@ -742,7 +750,7 @@
             </label>
             <button
               type="submit"
-              class="theme-footer-button layout-footer-button effects-footer-button"
+              class="theme-footer-button layout-button-footer effects-footer-button"
             >
               Subscribe
 

@@ -48,22 +48,18 @@
   background-color: var(--color-success);
 }
 
-.effects-portfolio-card {
+.theme-portfolio .effects-box {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.effects-portfolio-card:hover,
-.effects-portfolio-card:focus {
+.theme-portfolio .effects-box:hover,
+.theme-portfolio .effects-box:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   cursor: pointer;
 }
 
-.effects-card-cover {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.effects-portfolio-card:hover .effects-card-cover {
+.theme-portfolio .effects-box:hover .effects-card-cover {
   transform: translateY(0%);
 }
 
@@ -73,7 +69,8 @@
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.effects-modal-window {
+.effects-modal-window,
+.effects-card-cover {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -88,7 +85,8 @@
 }
 
 .theme-button-close:hover .effects-icon,
-.theme-button-close:focus .effects-icon {
+.theme-button-close:focus .effects-icon,
+.theme-input-container:focus-within .effects-icon {
   fill: var(--color-primary-brand);
 }
 
@@ -103,25 +101,15 @@
   fill: var(--color-white-background);
 }
 
-.effects-input-field {
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .effects-input-field:hover,
-.effects-input-field:focus {
-  border-color: var(--color-primary-brand);
-}
-
-.theme-input-container:focus-within .effects-icon {
-  fill: var(--color-primary-brand);
-}
-
-.effects-textarea {
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+.effects-input-field:focus,
 .effects-textarea:focus {
   border-color: var(--color-primary-brand);
+}
+
+.effects-textarea,
+.effects-input-field {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .theme-label .effects-checkbox-container {
