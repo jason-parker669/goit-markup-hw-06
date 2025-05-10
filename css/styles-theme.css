@@ -1,3 +1,4 @@
+/* #region COMMON STYLES */
 .theme-section-heading {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-heading);
@@ -35,14 +36,25 @@
   fill: currentColor;
 }
 
-.theme-small-heading {
-  color: var(--color-dark);
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-subheading);
+.theme-social-links .theme-link {
+  border-radius: 50%;
+  background-color: var(--color-primary-brand);
+  line-height: 0; /*removes line-height as it may interfere with positioning*/
 }
+
+.theme-heading-section {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--color-dark);
+}
+
+/* #endregion COMMON STYLES */
+
+/* #region HEADER*/
 
 .theme-header {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -120,28 +132,158 @@
   letter-spacing: 0.02em;
 }
 
+/* The burger menu*/
+.theme-header .theme-button {
+  background-color: transparent;
+  color: currentColor;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  line-height: 0; /* Prevents line-height from interfering with the positioning of the contents to the button */
+}
+
+/* #endregion HEADER*/
+
+/* #region HERO*/
+/* #region HERO IMAGE */
+
+/* Setting the HERO basic background styling for all screens and the fallback image*/
+
 .theme-hero {
   color: var(--color-white-background);
   background-color: var(--color-dark);
-  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-image: linear-gradient(
       to bottom,
       var(--color-hero-background),
       var(--color-hero-background)
     ),
     url(../images/people-office-1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
+/* When the image for mobile isn't bigger than the container and is standard resolution */
+
+@media screen and (max-width: 320px) and (max-resolution: 1.99dppx) {
+  .theme-hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-hero-background),
+        var(--color-hero-background)
+      ),
+      url(../images/hero-mobile.jpg);
+  }
+}
+
+/* When the image for mobile isn't bigger than the container and has a high resolution */
+
+@media screen and (max-width: 320px) and (min-resolution: 2dppx) {
+  .theme-hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-hero-background),
+        var(--color-hero-background)
+      ),
+      url(../images/hero-mobile@2x.jpg);
+  }
+}
+
+/* when the image for mobile is bigger than the contianer and has a standard resolution */
+
+@media screen and (max-width: 767px) and (max-resolution: 1.99dppx) {
+  .theme-hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-hero-background),
+        var(--color-hero-background)
+      ),
+      url(../images/hero-mobile-768.jpg);
+  }
+}
+
+/* when the image for mobile is bigger than the contianer and has a high resolution */
+
+@media screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .theme-hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-hero-background),
+        var(--color-hero-background)
+      ),
+      url(../images/hero-mobile-768@x2.jpg);
+  }
+}
+
+/* When the width reaches tablet-size and a normal resolution we use an image with an extended length to prevent image distortion */
+@media screen and (min-width: 768px) and (max-resolution: 1.99dppx) {
+  .theme-hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-hero-background),
+        var(--color-hero-background)
+      ),
+      url(../images/hero-tablet-1158.jpg);
+  }
+}
+
+/* When the width reaches tablet-size and a high resolution we use an image with an extended length to prevent image distortion */
+@media screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .theme-hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-hero-background),
+        var(--color-hero-background)
+      ),
+      url(../images/hero-tablet-1158@x2.jpg);
+  }
+}
+
+/* When the width reaches desktop-size and a normal resolution*/
+@media screen and (min-width: 1158px) and (max-resolution: 1.99dppx) {
+  .theme-hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-hero-background),
+        var(--color-hero-background)
+      ),
+      url(../images/hero-desktop.jpg);
+  }
+}
+
+/* When the width reaches desktop-size and a high resolution*/
+@media screen and (min-width: 1158px) and (min-resolution: 2dppx) {
+  .theme-hero {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-hero-background),
+        var(--color-hero-background)
+      ),
+      url(../images/hero-desktop@x2.jpg);
+  }
+}
+
+/* #endregion HERO IMAGE */
+
+/* heading typography for mobile version */
 .theme-hero-heading {
-  font-size: 56px;
-  line-height: 1.07;
+  font-family: var(--font-heading);
+  font-family: var(--font-weight-heading);
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
 }
 
-.theme-button {
+/* heading typography for tablet+ */
+@media screen and (min-width: 768px) {
+  .theme-hero-heading {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+  }
+}
+
+.theme-hero .theme-button {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-subheading);
   color: var(--color-white-background);
@@ -153,44 +295,84 @@
   border: none;
   border-radius: 4px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.theme-header .theme-button {
-  line-height: 0;
-  background-color: transparent;
-  color: currentColor;
-  border-radius: 0;
   border: none;
-  box-shadow: none;
+}
+/* #endregion HERO*/
+
+/* #region WHY US */
+
+.theme-why-us {
+  background-color: var(--color-white-background);
 }
 
-.theme-merit-point .container {
-  background-color: var(--color-light);
+/*---------------mobile---------------------*/
+/* the typography of the headings for the mobile version */
+.theme-merit-point .theme-heading {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
 }
 
-.layout-overlay .theme-body-text {
+/* the typography of the text descriptions */
+.theme-merit-point .theme-body-text {
+  font-weight: var(--font-weight-subheading);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--color-light);
-  background-color: var(--color-primary-brand);
 }
 
+/*----------------desktop----------------------*/
+@media screen and (min-width: 1158px) {
+  /* A border appears around the icons */
+  .theme-merit-point .theme-container {
+    border: 1px solid var(--color-subtle-text);
+  }
+  /* The headings are smaller in the desktop version */
+  .theme-merit-point .theme-heading {
+    font-weight: var(--font-weight-heading);
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  /* different font-weight of text descriptions */
+  .theme-merit-point .theme-body-text {
+    font-weight: var(--font-weight-body);
+  }
+}
+
+/* #endregion WHY US */
+
+/* #region TEAM */
 .theme-team {
   background-color: var(--color-light);
 }
 
+/*settings the border shadows for each team card */
 .theme-team .theme-box {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   background-color: var(--color-white-background);
+  border-radius: 0px 0px 4px 4px;
 }
 
-.theme-social-links .theme-link {
-  border-radius: 50%;
-  background-color: var(--color-primary-brand);
-  line-height: 0;
+.theme-image-subscript .theme-heading {
+  color: var(--color-dark);
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-subheading);
 }
+
+.theme-image-subscript .theme-body-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* #endregion TEAM */
 
 .theme-footer {
   color: var(--color-light);
@@ -260,7 +442,7 @@
   background-color: var(--color-accent);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  line-height: 0;
+  line-height: 0; /* Prevents line-height from interfering with the positioning of the contents to the button */
 }
 
 .theme-mobile-menu .theme-button-close {
@@ -289,6 +471,14 @@
   border-radius: 4px;
   background-color: transparent;
   outline: transparent;
+}
+
+.layout-overlay .theme-body-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-light);
+  background-color: var(--color-primary-brand);
 }
 
 .theme-textarea {

@@ -5,89 +5,99 @@
 
 /* #region COMMON LAYOUTS*/
 
-.layout-button-close {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-}
-
-.layout-header .layout-link {
-  position: relative;
-}
-
+/* Allows the layout (specifically the width and height) of svg-icons to be properly set*/
 .layout-icon {
   display: inline-block;
-  width: 1em;
-  height: 1em;
 }
 
-.layout-header-container .layout-icon,
-.layout-mobile-menu .layout-icon {
-  height: 24px;
-  width: 24px;
-}
-
-.layout-button-close .layout-icon {
-  height: 8px;
-  width: 8px;
-}
-
-.layout-header {
+/* the layout of the main button. Used in the Hero Section and modal window */
+.layout-button-main {
+  min-width: 169px;
+  height: 56px;
+  padding: 0;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.layout-heading-section {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
 /* #endregion COMMON LAYOUTS */
 
 /* #region HEADER */
 
-.layout-header-container {
-  max-width: 320px;
-  padding: 16px 16px;
+/* the layout of the entire header. Ensures the content is centered and there is no gap between sections */
+.layout-header {
   margin: 0 auto;
+}
+
+/* The layout of the container with all the header conents */
+.layout-header-container {
+  max-width: 320px; /*limitation for mobile version*/
+  padding: 16px 16px; /* Sets the header content space as per Figma Markup */
+  margin: 0 auto; /* Centers the header content inside the header*/
+
+  /* The items inside the header content area will be placed in a row, horizontally centered, with even space between the items */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.layout-header-container .layout-button {
-  display: block;
-  padding: 0;
-}
-
+/* The navigation links and contact information is removed from the header of the mobile version*/
 .layout-header-container .layout-header-nav,
 .layout-header-container .layout-address-section {
   display: none;
 }
 
+/* The position of the header navigation links is made relative so that the position of their underline decorations can be properly set up*/
+.layout-header .layout-link {
+  position: relative;
+}
+
+/* Sets space for the decorative underlines of the header navgiation links to be placed beneath them, not right under*/
 .layout-header-container .layout-link {
   padding-bottom: 24px;
 }
 
+/* Burger menu button*/
+.layout-header-container .layout-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*------------------tablet----------------*/
 @media screen and (min-width: 768px) {
   .layout-header-container {
     max-width: 768px;
   }
-
+  /*the burger menu is removed for tablets and higher resolutions */
   .layout-header-container .layout-button {
     display: none;
   }
 
+  /* The block containing the group with the list of header navigation links becomes visible for tablets and higher resolutions.*/
   .layout-header-container .layout-header-nav {
     display: block;
   }
-
+  /* the layout of the actual group containing the navigation links*/
   .layout-header-container .layout-nav-menu {
     display: flex;
     align-items: center;
     gap: 40px;
   }
-
+  /* The section with the address details becomes visible for tables and higher resolutions */
   .layout-header-container .layout-address-section {
     display: block;
   }
-
+  /* The layout of the header address group for tablets. Will have to be changed for desktop */
   .layout-header-container .layout-address-list {
     display: flex;
     flex-direction: column;
@@ -95,20 +105,22 @@
   }
 }
 
+/*------------desktop-----------------  */
 @media screen and (min-width: 1158px) {
   .layout-header-container {
     max-width: 1158px;
     padding: 24px 15px;
   }
-
+  /* manually moves the header navigation links away from the Logo as per Figma markup*/
   .layout-header-container .layout-logo {
     margin-right: 76px;
   }
-
+  /* Fills up the space between the header navigation links and the address group*/
   .layout-header-container .layout-header-nav {
     margin-right: auto;
   }
 
+  /* Changes the layout of the header address group for Desktops and higher*/
   .layout-header-container .layout-address-list {
     flex-direction: row;
     gap: 40px;
@@ -118,6 +130,8 @@
 /* #endregion HEADER */
 
 /* #region MOBILE MENU */
+
+/* The menu layout fills the entire screen */
 .layout-mobile-menu {
   position: fixed;
   top: 0;
@@ -126,6 +140,7 @@
   height: 100%;
 }
 
+/* The actual mobile menu container */
 .layout-mobile-menu .layout-mobile-container {
   height: 100%;
   position: relative;
@@ -133,19 +148,33 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: auto;
 }
 
+/* the layout of the close button at the top-right. Can be found in the modal window and mobile menu */
+.layout-button-close {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0; /* flex will be used to style the content inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Ensures that the space beneath the block containing the navigation menu links is filled*/
 .layout-mobile-menu .layout-header-nav {
-  display: block;
   margin-bottom: auto;
 }
-
+/* Regulates the layout of the navigation menu links inside their block*/
 .layout-mobile-menu .layout-nav-menu {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
+/* Regulates the layout of the contact information inside their block*/
 .layout-mobile-menu .layout-address-list {
   display: flex;
   flex-direction: column;
@@ -153,22 +182,240 @@
   margin-bottom: 48px;
 }
 
+/* Regulates the layout of the social links group at the bottom of the mobile menu*/
 .layout-mobile-menu .layout-social-links {
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
 
+/* Individual Social links are made into flex containers containing the actual icons centered */
 .layout-mobile-menu .layout-social-links .layout-link {
-  display: inline-block;
-  height: 40px;
   width: 40px;
-  padding: 8px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Removes the mobile menu for tables and Desktops */
 @media screen and (min-width: 768px) {
   .layout-mobile-menu {
     display: none;
   }
 }
 /* #endregion MOBILE MENU */
+
+/* #region HERO */
+
+/* centers the container inside the hero section */
+.layout-hero {
+  margin: 0 auto;
+}
+
+/* sets the content area inside the Hero container and aligns items inside to be centered */
+.layout-hero .layout-container {
+  max-width: 320px;
+  padding: 72px 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* The layout of the main heading */
+.layout-hero-heading {
+  max-width: 216px;
+  margin: 0 auto 72px;
+}
+
+/*-----------------tablet-------------- */
+@media screen and (min-width: 768px) {
+  .layout-hero .layout-container {
+    max-width: 768px;
+    padding: 112px 16px;
+  }
+
+  .layout-hero-heading {
+    max-width: 496px;
+    margin: 0 auto 36px;
+  }
+}
+/*----------------desktop-------------*/
+@media screen and (min-width: 1158px) {
+  .layout-hero .layout-container {
+    max-width: 1158px;
+    padding: 188px 15px;
+  }
+
+  .layout-hero-heading {
+    max-width: 496px;
+    margin: 0 auto 48px;
+  }
+}
+
+/* #endregion HERO */
+
+/* #region WHY US */
+.layout-why-us {
+  margin: 0 auto;
+}
+
+/* setting the content area of the container of the WHY US section */
+.layout-why-us .layout-container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 96px 16px;
+}
+
+/* The elements will wrap depending depending on their breakpoint. This will be regulated by their width */
+.layout-merit-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+
+.layout-merit-point {
+  width: calc((100%) / 1);
+}
+
+/* The icons are not present in the mobile and tablet versions */
+.layout-merit-point .layout-container {
+  display: none;
+}
+
+.layout-merit-points .layout-heading {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/*-------------tablet------------*/
+@media screen and (min-width: 720px) {
+  .layout-why-us .layout-container {
+    max-width: 768px;
+  }
+  .layout-merit-points {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .layout-merit-point {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .layout-merit-points .layout-heading {
+    text-align: left;
+  }
+}
+
+/*------------desktop------------*/
+
+@media screen and (min-width: 1158px) {
+  .layout-why-us .layout-container {
+    max-width: 1158px;
+    padding: 120px 15px;
+  }
+
+  .layout-merit-points {
+    gap: 24px;
+  }
+
+  .layout-merit-point {
+    width: calc((100% - 72px) / 4);
+  }
+
+  /* the icons are made visible in the desktop version */
+  .layout-merit-point .layout-container {
+    padding: 0;
+    height: 112px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+}
+/* #endregion WHY US */
+
+/* #region TEAM */
+.layout-team {
+  margin: 0 auto;
+}
+
+.layout-team .layout-container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 96px 28px;
+  text-align: center;
+}
+
+.layout-team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+
+.layout-team-members .layout-box {
+  width: calc((100%) / 1);
+}
+
+.layout-team .layout-image-subscript {
+  padding: 32px 0;
+  text-align: center;
+}
+
+.layout-image-subscript .layout-heading {
+  margin-bottom: 8px;
+}
+
+.layout-image-subscript .layout-body-text {
+  margin-bottom: 8px;
+}
+
+.layout-team .layout-social-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.layout-social-links .layout-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+/*--------------tablet---------------------*/
+@media screen and (min-width: 720px) {
+  .layout-team .layout-container {
+    max-width: 720px;
+    padding: 96px 108px;
+  }
+
+  .layout-team-members {
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .layout-team-members .layout-box {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+/*--------------desktop------------------*/
+@media screen and (min-width: 1158px) {
+  .layout-team .layout-container {
+    max-width: 1158px;
+    padding: 120px 15px;
+  }
+
+  .layout-team-members {
+    gap: 24px;
+  }
+
+  .layout-team-members .layout-box {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+}
+
+/* #endregion TEAM*/

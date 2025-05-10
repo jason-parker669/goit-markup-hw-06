@@ -72,20 +72,19 @@
           </ul>
         </address>
 
-        <button type="button" class="theme-button layout-button">
+        <button class="theme-button layout-button" type="button">
           <svg
             class="theme-icon layout-icon effects-icon"
-            width="24"
             height="24"
+            width="24"
           >
             <use href="./images/icons.svg#icon-burger-menu"></use>
           </svg>
         </button>
       </div>
 
-      <div
-        class="theme-mobile-menu layout-mobile-menu effects-mobile-menu effects-is-open"
-      >
+      <!-- add/remove effects-is-open class to view mobile menu -->
+      <div class="theme-mobile-menu layout-mobile-menu effects-mobile-menu">
         <div class="layout-mobile-container">
           <button
             type="button"
@@ -144,28 +143,28 @@
           <ul class="theme-social-links layout-social-links">
             <li class="layout-social-link">
               <a href="" class="theme-link layout-link effects-social-icon">
-                <svg class="theme-icon layout-icon" width="40" height="40">
+                <svg class="theme-icon layout-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-instagram-2"></use>
                 </svg>
               </a>
             </li>
             <li class="layout-social-link">
               <a href="" class="theme-link layout-link effects-social-icon">
-                <svg class="theme-icon layout-icon" width="40" height="40">
+                <svg class="theme-icon layout-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-twitter-1"></use>
                 </svg>
               </a>
             </li>
             <li class="layout-social-link">
               <a href="" class="theme-link layout-link effects-social-icon">
-                <svg class="theme-icon layout-icon" width="40" height="40">
+                <svg class="theme-icon layout-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-facebook-1"></use>
                 </svg>
               </a>
             </li>
             <li class="layout-social-link">
               <a href="" class="theme-link layout-link effects-social-icon">
-                <svg class="theme-icon layout-icon" width="40" height="40">
+                <svg class="theme-icon layout-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-linkedin-1"></use>
                 </svg>
               </a>
@@ -175,16 +174,16 @@
       </div>
     </header>
 
-    <main class="hidden">
+    <main>
       <!-- #region HERO BANNER  -->
       <section class="theme-hero layout-hero">
-        <div class="container">
+        <div class="layout-container">
           <h1 class="theme-hero-heading layout-hero-heading">
             Effective Solutions for Your Business
           </h1>
           <button
             type="button"
-            class="theme-button layout-button effects-button"
+            class="theme-button layout-button-main effects-button"
           >
             Order Service
           </button>
@@ -193,58 +192,56 @@
       <!-- #endregion HERO BANNER  -->
       <!-- #region WHY US -->
       <section class="theme-why-us layout-why-us">
-        <div class="container">
-          <h2 class="visually-hidden">Our Values</h2>
+        <div class="layout-container">
+          <h2
+            class="visually-hidden theme-heading-section layout-heading-section"
+          >
+            Our Values
+          </h2>
           <ul class="layout-merit-points">
             <li class="theme-merit-point layout-merit-point">
-              <div class="container">
+              <div class="theme-container layout-container">
                 <svg class="theme-icon layout-icon" width="64" height="64">
                   <use href="./images/icons.svg#icon-antenna-1"></use>
                 </svg>
               </div>
-              <h3 class="layout-small-heading theme-small-heading">Strategy</h3>
+              <h3 class="theme-heading layout-heading">Strategy</h3>
               <p class="theme-body-text">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
             </li>
             <li class="theme-merit-point layout-merit-point">
-              <div class="container">
+              <div class="theme-container layout-container">
                 <svg class="theme-icon layout-icon" width="64" height="64">
                   <use href="./images/icons.svg#icon-clock-1"></use>
                 </svg>
               </div>
-              <h3 class="layout-small-heading theme-small-heading">
-                Punctuality
-              </h3>
+              <h3 class="theme-heading layout-heading">Punctuality</h3>
               <p class="theme-body-text">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
             </li>
             <li class="theme-merit-point layout-merit-point">
-              <div class="container">
+              <div class="theme-container layout-container">
                 <svg class="theme-icon layout-icon" width="64" height="64">
                   <use href="./images/icons.svg#icon-diagram-1"></use>
                 </svg>
               </div>
-              <h3 class="layout-small-heading theme-small-heading">
-                Diligence
-              </h3>
+              <h3 class="theme-heading layout-heading">Diligence</h3>
               <p class="theme-body-text">
                 Research and confirm brands with the strongest digital growth
                 opportunities and minimize risk.
               </p>
             </li>
             <li class="theme-merit-point layout-merit-point">
-              <div class="container">
+              <div class="theme-container layout-container">
                 <svg class="theme-icon layout-icon" width="64" height="64">
                   <use href="./images/icons.svg#icon-astronaut-1"></use>
                 </svg>
               </div>
-              <h3 class="theme-small-heading layout-small-heading">
-                Technologies
-              </h3>
+              <h3 class="theme-heading layout-heading">Technologies</h3>
               <p class="theme-body-text">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
@@ -255,21 +252,20 @@
       </section>
       <!-- #endregion WHY US -->
       <!-- #region TEAM -->
-      <section class="layout-team theme-team">
-        <div class="container">
-          <h2 class="layout-section-heading theme-section-heading">Our Team</h2>
+      <section class="theme-team layout-team">
+        <div class="layout-container">
+          <h2 class="theme-heading-section layout-heading-section">Our Team</h2>
           <ul class="layout-team-members">
             <li class="theme-box layout-box">
               <img
                 src="./images/team1.jpg"
+                srcset="./images/team1.jpg 1x, ./images/team1@x2.jpg 2x"
                 alt="Man with a beard in a light blue suit"
                 height="260"
                 width="264"
               />
-              <div class="layout-image-subscript">
-                <h3 class="layout-small-heading theme-small-heading">
-                  Mark Guerrero
-                </h3>
+              <div class="theme-image-subscript layout-image-subscript">
+                <h3 class="theme-heading layout-heading">Mark Guerrero</h3>
                 <p class="theme-body-text layout-body-text">Product Designer</p>
                 <ul class="theme-social-links layout-social-links">
                   <li class="layout-social-link">
@@ -334,14 +330,13 @@
             <li class="theme-box layout-box">
               <img
                 src="./images/team2.jpg"
+                srcset="./images/team2.jpg 1x, ./images/team2@x2.jpg 2x"
                 alt="Smiling man in a light blue suit"
                 height="260"
                 width="264"
               />
-              <div class="layout-image-subscript">
-                <h3 class="layout-small-heading theme-small-heading">
-                  Tom Ford
-                </h3>
+              <div class="theme-image-subscript layout-image-subscript">
+                <h3 class="theme-heading layout-heading">Tom Ford</h3>
                 <p class="theme-body-text layout-body-text">
                   Frontend Developer
                 </p>
@@ -408,14 +403,13 @@
             <li class="theme-box layout-box">
               <img
                 src="./images/team3.jpg"
+                srcset="./images/team3.jpg 1x, ./images/team3@x2.jpg 2x"
                 alt="Woman with long hair in a pink sweater"
                 height="260"
                 width="264"
               />
-              <div class="layout-image-subscript">
-                <h3 class="layout-small-heading theme-small-heading">
-                  Camila Garcia
-                </h3>
+              <div class="theme-image-subscript layout-image-subscript">
+                <h3 class="theme-heading layout-heading">Camila Garcia</h3>
                 <p class="theme-body-text layout-body-text">Marketing</p>
                 <ul class="theme-social-links layout-social-links">
                   <li class="layout-social-link">
@@ -480,14 +474,13 @@
             <li class="theme-box layout-box">
               <img
                 src="./images/team4.jpg"
+                srcset="./images/team4.jpg 1x, ./images/team4@x2.jpg 2x"
                 alt="Unshaved man in a grey shirt"
                 height="260"
                 width="264"
               />
-              <div class="layout-image-subscript">
-                <h3 class="layout-small-heading theme-small-heading">
-                  Daniel Wilson
-                </h3>
+              <div class="theme-image-subscript layout-image-subscript">
+                <h3 class="theme-heading layout-heading">Daniel Wilson</h3>
                 <p class="theme-body-text layout-body-text">UI Designer</p>
                 <ul class="theme-social-links layout-social-links">
                   <li class="layout-social-link">
@@ -554,7 +547,7 @@
       </section>
       <!-- #endregion TEAM -->
       <!-- #region PORTFOLIO -->
-      <section class="layout-portfolio">
+      <section class="layout-portfolio hidden">
         <div class="container">
           <h2 class="layout-section-heading theme-section-heading">
             Our Portfolio
@@ -573,7 +566,7 @@
                   · Cloud Storage App
                 </p>
               </div>
-              <div class="layout-image-subscript">
+              <div class="theme-image-subscript layout-image-subscript">
                 <h3 class="layout-small-heading theme-small-heading">
                   Banking App
                 </h3>
@@ -594,7 +587,7 @@
                   · Cloud Storage App
                 </p>
               </div>
-              <div class="layout-image-subscript">
+              <div class="theme-image-subscript layout-image-subscript">
                 <h3 class="layout-small-heading theme-small-heading">
                   Cashless Payment
                 </h3>
@@ -615,7 +608,7 @@
                   · Cloud Storage App
                 </p>
               </div>
-              <div class="layout-image-subscript">
+              <div class="theme-image-subscript layout-image-subscript">
                 <h3 class="layout-small-heading theme-small-heading">
                   Meditation App
                 </h3>
@@ -636,7 +629,7 @@
                   · Cloud Storage App
                 </p>
               </div>
-              <div class="layout-image-subscript">
+              <div class="theme-image-subscript layout-image-subscript">
                 <h3 class="layout-small-heading theme-small-heading">
                   Taxi Service
                 </h3>
@@ -657,7 +650,7 @@
                   · Cloud Storage App
                 </p>
               </div>
-              <div class="layout-image-subscript">
+              <div class="theme-image-subscript layout-image-subscript">
                 <h3 class="layout-small-heading theme-small-heading">
                   Screen Illustrations
                 </h3>
@@ -878,7 +871,7 @@
             </label>
           </div>
 
-          <button class="theme-button layout-button effects-button">
+          <button class="theme-button layout-button-main effects-button">
             Send
           </button>
         </form>
