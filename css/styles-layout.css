@@ -1,6 +1,3 @@
-.hidden {
-  display: none;
-}
 /* ============================ MOBILE FIRST ===========================*/
 
 /* #region COMMON LAYOUTS*/
@@ -657,6 +654,7 @@
 
 /* #region MODAL WINDOW */
 
+/* the overlay which covers the entire viewport*/
 .layout-modal-overlay {
   position: fixed;
   top: 0;
@@ -667,6 +665,7 @@
   pointer-events: none;
 }
 
+/* Setting the layout and content area of the actual window with the form*/
 .layout-modal-window {
   position: absolute;
   top: 50%;
@@ -679,25 +678,41 @@
   overflow-y: auto;
 }
 
-.layout-form {
+/* The form layout inside the modal window. Items go from top to bottom*/
+.layout-modal-window .layout-form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
+
+/* adds space between the heading and the form */
+.layout-modal-heading {
+  margin-bottom: 16px;
+}
+
+/*Adds space under each section containing an input field and its label*/
 .layout-input-section {
   margin-bottom: 8px;
 }
 
+/* set space between the title of the label and the input field*/
+.layout-form .layout-label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/*The width of the input field is made to stretch in full. Fixed height. space is made to the left with paddding to place an icon*/
 .layout-input-field {
   width: 100%;
   height: 40px;
   padding-left: 38px;
 }
 
+/*Enables absolute positioning of elements inside the input-field*/
 .layout-input-container {
   position: relative;
 }
 
+/*Positioning of icons inside the input fields*/
 .layout-input-container .layout-icon {
   position: absolute;
   left: 16px;
@@ -707,44 +722,44 @@
   height: 24px;
 }
 
+/* Sets space between the text area container and the Checkbox section*/
 .layout-textarea-section {
   margin-bottom: 16px;
-  resize: none;
 }
 
+/* The actual text area input */
 .layout-textarea {
   width: 100%;
   height: 120px;
   padding: 8px 16px;
   resize: none;
 }
-
-.layout-form .layout-label {
-  display: block;
-  margin-bottom: 4px;
-}
-
+/* sets space between the checkbox area and the button */
 .layout-checkbox-section {
   margin-bottom: 24px;
 }
 
+/*the square containing the checkbox*/
 .layout-label .layout-checkbox-container {
   height: 16px;
   width: 16px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex-shrink: 0; /*prevents checkbox from shrinking*/
 }
 
+/*The checkbox and the Privacy policy text*/
 .layout-checkbox-section .layout-label {
   margin: 0;
-  display: flex;
+  padding: 0;
+  display: flex; /* flex will be used to align the checkbox and text*/
   flex-wrap: nowrap;
   gap: 8px;
   align-items: center;
 }
 
+/*Adding an underline to the privacy policy link*/
 .layout-checkbox-section .layout-link {
   text-decoration: underline;
 }

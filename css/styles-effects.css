@@ -1,24 +1,6 @@
-.theme-header .effects-link,
-.theme-header .effects-address {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* #region COMMON LAYOUTS*/
 
-.theme-header .effects-link:hover,
-.theme-header .effects-link:focus,
-.theme-header .effects-address:hover,
-.theme-header .effects-address:focus {
-  color: var(--color-pressed-state);
-}
-
-.theme-header .effects-link::after {
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.theme-header .effects-link:hover::after,
-.theme-header .effects-link:focus::after {
-  opacity: 1;
-}
-
+/*ensures cursor change over buttons, and tells how their background color should change*/
 .effects-button,
 .effects-social-icon,
 .effects-footer-button {
@@ -26,6 +8,7 @@
   cursor: pointer;
 }
 
+/*The background color changes to dark blue for most buttons and social icons when pressed*/
 .effects-button:hover,
 .effects-button:focus,
 .effects-social-icon:hover,
@@ -35,26 +18,7 @@
   background-color: var(--color-pressed-state);
 }
 
-.theme-footer .effects-social-icon:hover,
-.theme-footer .effects-social-icon:focus {
-  background-color: var(--color-success);
-}
-
-.theme-portfolio .effects-box {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.theme-portfolio .effects-box:hover,
-.theme-portfolio .effects-box:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  cursor: pointer;
-}
-
-.theme-portfolio .effects-box:hover .effects-card-cover {
-  transform: translateY(0%);
-}
-
+/*The modal overlay and mobile menu appears when the .is-open class is added*/
 .layout-modal-overlay.is-open,
 .layout-mobile-menu.is-open {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -64,57 +28,124 @@
   pointer-events: auto;
 }
 
-.effects-modal-window,
-.effects-card-cover {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+/*Tells how the background color and border of the close button should change*/
 .effects-button-close {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.effects-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.theme-button-close:hover .effects-icon,
-.theme-button-close:focus .effects-icon,
-.theme-input-container:focus-within .effects-icon {
-  fill: var(--color-primary-brand);
-}
-
+/* the background color of the close button changes to blue and the border dissappears when hovered upon or focused*/
 .effects-button-close:hover,
 .effects-button-close:focus {
   background-color: var(--color-pressed-state);
   border: none;
 }
 
+/*How the actual icon should change its fill*/
+.effects-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* the x inside the close button changes color */
 .effects-button-close:hover .effects-icon,
 .effects-button-close:focus .effects-icon {
   fill: var(--color-white-background);
 }
 
+/* the icon inside an input field when that input field is focused upon changes color*/
+.theme-input-container:focus-within .effects-icon {
+  fill: var(--color-primary-brand);
+}
+
+/* How the border color of input fields and text areas should change*/
+.effects-textarea,
+.effects-input-field {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*The border color of an input field changes when focused upon or hovered*/
 .effects-input-field:hover,
 .effects-input-field:focus,
 .effects-textarea:focus {
   border-color: var(--color-primary-brand);
 }
 
-.effects-textarea,
-.effects-input-field {
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+/*How the background color, border, and fill of a checkbox should change*/
 .theme-label .effects-checkbox-container {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* The background color, border and fill of a checkbox changes once it is checked*/
 input[type="checkbox"]:checked ~ .theme-label .effects-checkbox-container {
   background-color: var(--color-pressed-state);
   border: none;
   fill: var(--color-light);
 }
+
+/* #endregion COMMON LAYOUTS*/
+
+/* #region HEADER */
+
+/*How the color should change for nagitation items, phone, and email*/
+.theme-header .effects-link,
+.theme-header .effects-address {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*To what the color should change for navigation items, phone, and email*/
+.theme-header .effects-link:hover,
+.theme-header .effects-link:focus,
+.theme-header .effects-address:hover,
+.theme-header .effects-address:focus {
+  color: var(--color-pressed-state);
+}
+
+/*How the underline element under its navigation item should appear*/
+.theme-header .effects-link::after {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*The underline element under its navigation item should become completely visible*/
+.theme-header .effects-link:hover::after,
+.theme-header .effects-link:focus::after {
+  opacity: 1;
+}
+
+/* #endregion HEADER*/
+
+/* #region PORTFOLIO*/
+
+/*How the box shadows should appear around the Portfolio cardds*/
+.theme-portfolio .effects-box {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+/* what shadows should appear around the portfolio cards*/
+.theme-portfolio .effects-box:hover,
+.theme-portfolio .effects-box:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+/*Tells how the Portfolio cards should slide up*/
+.effects-card-cover {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*the text overlay in a portfolio card appears when hovered over*/
+.theme-portfolio .effects-box:hover .effects-card-cover {
+  transform: translateY(0%);
+}
+
+/* #endregion PORTFOLIO*/
+
+/* #region FOOTER*/
+
+/*the icons in the footer should change to green, not blue*/
+.theme-footer .effects-social-icon:hover,
+.theme-footer .effects-social-icon:focus {
+  background-color: var(--color-success);
+}
+/* #endregion FOOTER*/

@@ -1,47 +1,6 @@
 /* #region COMMON STYLES */
-.theme-section-heading {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-heading);
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--color-dark);
-}
 
-.theme-subheading {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-subheading);
-}
-
-.theme-body-text {
-  font-family: var(--font-body);
-  font-weight: var(--weight-regular);
-  font-style: normal;
-}
-
-.theme-logo {
-  font-family: var(--font-logo);
-  font-weight: var(--font-weight-heading);
-  color: var(--color-primary-brand);
-  text-transform: uppercase;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-}
-
-.theme-icon {
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-
-.theme-social-links .theme-link {
-  border-radius: 50%;
-  background-color: var(--color-primary-brand);
-  line-height: 0; /*removes line-height as it may interfere with positioning*/
-}
-
+/*typically h2 headings*/
 .theme-heading-section {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-heading);
@@ -52,29 +11,89 @@
   color: var(--color-dark);
 }
 
+/*typically h3 headings*/
+.theme-subheading {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-subheading);
+}
+
+/*default body text*/
+.theme-body-text {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-style: normal;
+}
+
+/*The logo found in the header and footer*/
+.theme-logo {
+  font-family: var(--font-logo);
+  font-weight: var(--font-weight-heading);
+  color: var(--color-primary-brand);
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+/*Icons automatically match our design theme colors*/
+.theme-icon {
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+/*social icon container*/
+.theme-social-links .theme-link {
+  border-radius: 50%;
+  background-color: var(--color-primary-brand);
+  line-height: 0; /*removes line-height as it may interfere with positioning*/
+}
+/* the main button found in the Hero section, and modal windows */
+.theme-button-main {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-subheading);
+  color: var(--color-white-background);
+  background-color: var(--color-primary-brand);
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+/*The close button present in the Modal overlay and Mobile window*/
+.theme-button-close {
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  line-height: 0; /* Prevents line-height from interfering with the positioning of the contents to the button */
+}
 /* #endregion COMMON STYLES */
 
 /* #region HEADER*/
 
+/*sets the border and shadow under the header*/
 .theme-header {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid var(--color-accent);
 }
 
+/*typography of the header menu items*/
 .theme-header-nav {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-subheading);
 }
 
-.theme-header .theme-logo-accent {
-  color: var(--color-dark);
-}
-
+/*The logo highlight, as well as the navigation items color*/
+.theme-header .theme-logo-accent,
 .theme-header-nav .theme-link {
   color: var(--color-dark);
 }
 
+/* The decorative underline under the header navigation links. Is invisible by default, but appears when selected or hovered upon*/
 .theme-header .theme-link::after {
   content: "";
   position: absolute;
@@ -88,6 +107,9 @@
   pointer-events: none;
 }
 
+/*----------------mobile--------------------*/
+
+/* the contact phone and email */
 .theme-header-container .theme-address {
   font-family: var(--font-body);
   font-weight: var(--font-weight-body);
@@ -98,6 +120,7 @@
   letter-spacing: 0.04em;
 }
 
+/*------------------desktop------------------*/
 @media screen and (min-width: 1158px) {
   .theme-header-container .theme-address {
     font-size: 16px;
@@ -106,12 +129,16 @@
   }
 }
 
+/*---------------------mobile menu-----------------*/
+
+/*The menu is not present by default*/
 .theme-mobile-menu {
   background-color: var(--color-white-background);
   opacity: 0;
   visibility: hidden;
 }
 
+/* The contact phone and email inside the mobile menu*/
 .theme-mobile-menu .theme-address {
   font-family: var(--font-body);
   font-weight: var(--font-weight-subheading);
@@ -122,6 +149,7 @@
   letter-spacing: 0.02em;
 }
 
+/* The navigation item*/
 .theme-mobile-menu .theme-header-nav .theme-link {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-heading);
@@ -140,6 +168,11 @@
   border: none;
   box-shadow: none;
   line-height: 0; /* Prevents line-height from interfering with the positioning of the contents to the button */
+}
+
+/*The close button of the mobile menu*/
+.theme-mobile-menu .theme-button-close {
+  background-color: transparent;
 }
 
 /* #endregion HEADER*/
@@ -265,7 +298,7 @@
 
 /* #endregion HERO IMAGE */
 
-/* heading typography for mobile version */
+/*------------------mobile-------------------*/
 .theme-hero-heading {
   font-family: var(--font-heading);
   font-family: var(--font-weight-heading);
@@ -274,28 +307,13 @@
   letter-spacing: 0.02em;
 }
 
-/* heading typography for tablet+ */
+/*------------------tablet-------------------*/
 @media screen and (min-width: 768px) {
   .theme-hero-heading {
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
   }
-}
-
-.theme-button-main {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-subheading);
-  color: var(--color-white-background);
-  background-color: var(--color-primary-brand);
-  font-size: 16px;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-  border: none;
 }
 /* #endregion HERO*/
 
@@ -349,14 +367,14 @@
   background-color: var(--color-light);
 }
 
-/*settings the border shadows for each team card */
+/*sets the border shadows for each team card */
 .theme-team .theme-box {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   background-color: var(--color-white-background);
   border-radius: 0px 0px 4px 4px;
 }
-
+/* The names of team members*/
 .theme-image-subscript .theme-heading {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-subheading);
@@ -365,7 +383,7 @@
   letter-spacing: 0.02em;
   color: var(--color-dark);
 }
-
+/* Job descriptions */
 .theme-image-subscript .theme-body-text {
   font-size: 16px;
   line-height: 1.5;
@@ -379,13 +397,14 @@
 .theme-portfolio {
   background-color: var(--color-white-background);
 }
-
+/* Creates a border for the section under each image*/
 .theme-portfolio .theme-image-subscript {
   border: 1px solid var(--color-accent);
   border-top: none;
 }
 
 /*------------------mobile------------------------*/
+/*sets box shadows for cards*/
 .theme-portfolio .theme-box {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -400,21 +419,25 @@
 
 @media screen and (min-width: 1158px) {
   .theme-portfolio .theme-box {
+    /*In desktop, shadows appear on hover*/
     box-shadow: none;
   }
 }
 
 /* #endregion PORTFOLIO*/
 
+/* #region FOOTER */
 .theme-footer {
   color: var(--color-light);
   background-color: var(--color-dark);
 }
 
+/*the highlight of the logo is different to that of the header*/
 .theme-footer .theme-logo-accent {
   color: var(--color-light);
 }
 
+/*footer headings, specifically for the Social Media and Subscription*/
 .theme-footer .theme-footer-heading {
   color: var(--color-white-background);
   font-family: var(--font-heading);
@@ -424,6 +447,7 @@
   letter-spacing: 0.02em;
 }
 
+/* The email input section*/
 .theme-footer .theme-input {
   font-family: var(--font-body);
   font-weight: var(--font-weight-body);
@@ -438,6 +462,7 @@
   opacity: 0.6; /*opacity is lower in the mobile and desktop version */
 }
 
+/* The subscribe button*/
 .theme-footer-button {
   color: var(--color-white-background);
   background-color: var(--color-primary-brand);
@@ -448,7 +473,7 @@
   letter-spacing: 0.04em;
   border-radius: 4px;
 }
-
+/* Placeholder text for Email input*/
 .theme-footer .theme-input::placeholder {
   font-family: var(--font-body);
   font-weight: var(--font-weight-body);
@@ -466,12 +491,18 @@
   }
 }
 
+/* #endregion FOOTER */
+
+/* #region MODAL OVERLAY*/
+
+/* The overlay is not present initially*/
 .theme-modal-overlay {
   background-color: var(--color-modal-overlay);
   opacity: 0;
   visibility: none;
 }
 
+/* The actual window containing the form*/
 .theme-modal-window {
   background-color: var(--color-modal-background);
   border-radius: 4px;
@@ -479,21 +510,10 @@
     0 1px 1px rgba(0, 0, 0, 0.14);
 }
 
-.theme-button-close {
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  line-height: 0; /* Prevents line-height from interfering with the positioning of the contents to the button */
-}
-
-.theme-mobile-menu .theme-button-close {
-  background-color: transparent;
-}
-
+/* The main heading of form*/
 .theme-modal-heading {
+  font-family: var(--font-body);
   font-weight: var(--font-weight-subheading);
-  font-family: var(--font-heading);
   text-align: center;
   font-size: 16px;
   line-height: 1.5;
@@ -501,6 +521,7 @@
   color: var(--color-dark);
 }
 
+/*The labels above the input fields*/
 .theme-form .theme-label {
   font-size: 12px;
   line-height: 1.17;
@@ -508,6 +529,7 @@
   color: var(--color-subtle-text);
 }
 
+/*The input field form*/
 .theme-input-field {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -515,6 +537,7 @@
   outline: transparent;
 }
 
+/*standard text within the form*/
 .layout-overlay .theme-body-text {
   font-size: 16px;
   line-height: 1.5;
@@ -523,6 +546,7 @@
   background-color: var(--color-primary-brand);
 }
 
+/*the text area container and inside typography*/
 .theme-textarea {
   font-size: 12px;
   line-height: 1.17;
@@ -533,13 +557,16 @@
   background-color: transparent;
   outline: transparent;
 }
-
+/*The square container of the checkbox*/
 .theme-label .theme-checkbox-container {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  fill: transparent;
+  fill: transparent; /*the icon is initially visually empty*/
 }
 
+/*The link with the Privacy Policy text*/
 .theme-label .theme-link {
   color: var(--color-primary-brand);
 }
+
+/* #endregion MODAL OVERLAY*/
