@@ -11,12 +11,6 @@
   color: var(--color-dark);
 }
 
-/*typically h3 headings*/
-.theme-subheading {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-subheading);
-}
-
 /*default body text*/
 .theme-body-text {
   font-family: var(--font-body);
@@ -60,7 +54,6 @@
   border: none;
   border-radius: 4px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-  border: none;
 }
 /*The close button present in the Modal overlay and Mobile window*/
 .theme-button-close {
