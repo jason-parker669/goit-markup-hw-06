@@ -455,6 +455,13 @@
   transform: translateY(100%);
   text-align: left;
 }
+
+/*ensures the images actually fill their containers as they may otherwise mis-size*/
+.layout-overlay img {
+  width: 100%;
+  height: auto;
+}
+
 /* The content area of heading and subheading under the image*/
 .layout-portfolio .layout-image-subscript {
   padding: 32px 16px;
