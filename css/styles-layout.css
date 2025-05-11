@@ -745,6 +745,10 @@
   align-items: center;
 }
 
+.layout-checkbox-section .layout-link {
+  text-decoration: underline;
+}
+
 /*----------------tablet+-------------*/
 @media screen and (min-width: 768px) {
   .layout-modal-window {
