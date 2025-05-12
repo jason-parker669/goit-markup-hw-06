@@ -153,6 +153,11 @@
   letter-spacing: 0.02em;
 }
 
+/*prevents line-height with interfering with address section placement*/
+.theme-header .theme-address-section {
+  line-height: 0;
+}
+
 /* The burger menu*/
 .theme-header .theme-button {
   background-color: transparent;
@@ -204,7 +209,7 @@
 
 /* When the image for mobile isn't bigger than the container and has a high resolution */
 
-@media screen and (max-width: 320px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 320px) and (min-resolution: 2x) {
   .theme-hero {
     background-image: linear-gradient(
         to bottom,
@@ -230,7 +235,7 @@
 
 /* when the image for mobile is bigger than the contianer and has a high resolution */
 
-@media screen and (max-width: 767px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 767px) and (min-resolution: 2x) {
   .theme-hero {
     background-image: linear-gradient(
         to bottom,
@@ -254,7 +259,7 @@
 }
 
 /* When the width reaches tablet-size and a high resolution we use an image with an extended length to prevent image distortion */
-@media screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-resolution: 2x) {
   .theme-hero {
     background-image: linear-gradient(
         to bottom,
@@ -278,7 +283,7 @@
 }
 
 /* When the width reaches desktop-size and a high resolution*/
-@media screen and (min-width: 1158px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1158px) and (min-resolution: 2x) {
   .theme-hero {
     background-image: linear-gradient(
         to bottom,
@@ -339,6 +344,7 @@
   /* A border appears around the icons */
   .theme-merit-point .theme-container {
     border: 1px solid var(--color-subtle-text);
+    background-color: var(--color-light);
   }
   /* The headings are smaller in the desktop version */
   .theme-merit-point .theme-heading {

@@ -37,13 +37,13 @@
 
 /* the layout of the entire header. Ensures the content is centered and there is no gap between sections */
 .layout-header {
+  padding: 16px 16px; /* Sets the header content space as per Figma Markup */
   margin: 0 auto;
 }
 
 /* The layout of the container with all the header conents */
 .layout-header-container {
   max-width: 320px; /*limitation for mobile version*/
-  padding: 16px 16px; /* Sets the header content space as per Figma Markup */
   margin: 0 auto; /* Centers the header content inside the header*/
 
   /* The items inside the header content area will be placed in a row, horizontally centered, with even space between the items */
@@ -64,7 +64,8 @@
 }
 
 /* Sets space for the decorative underlines of the header navgiation links to be placed beneath them, not right under*/
-.layout-header-container .layout-link {
+.layout-header-container .layout-nav-menu .layout-link {
+  padding-top: 24px;
   padding-bottom: 24px;
 }
 
@@ -80,6 +81,10 @@
 
 /*------------------tablet----------------*/
 @media screen and (min-width: 768px) {
+  /*The navigation links will now control vertical spacing*/
+  .layout-header {
+    padding: 0 16px;
+  }
   .layout-header-container {
     max-width: 768px;
   }
@@ -101,6 +106,7 @@
   /* The section with the address details becomes visible for tables and higher resolutions */
   .layout-header-container .layout-address-section {
     display: block;
+    padding: 16px 0;
   }
   /* The layout of the header address group for tablets. Will have to be changed for desktop */
   .layout-header-container .layout-address-list {
@@ -112,9 +118,11 @@
 
 /*------------desktop-----------------  */
 @media screen and (min-width: 1158px) {
+  .layout-header {
+    padding: 24px 15px;
+  }
   .layout-header-container {
     max-width: 1158px;
-    padding: 24px 15px;
   }
   /* manually moves the header navigation links away from the Logo as per Figma markup*/
   .layout-header-container .layout-logo {
@@ -123,6 +131,10 @@
   /* Fills up the space between the header navigation links and the address group*/
   .layout-header-container .layout-header-nav {
     margin-right: auto;
+  }
+
+  .layout-header-container .layout-address-section {
+    padding: 0;
   }
 
   /* Changes the layout of the header address group for Desktops and higher*/
@@ -219,12 +231,12 @@
 /* centers the container inside the hero section */
 .layout-hero {
   margin: 0 auto;
+  padding: 72px 16px;
 }
 
 /* sets the content area inside the Hero container and aligns items inside to be centered */
 .layout-hero .layout-container {
   max-width: 320px;
-  padding: 72px 16px;
   margin: 0 auto;
   text-align: center;
 }
@@ -237,9 +249,11 @@
 
 /*-----------------tablet-------------- */
 @media screen and (min-width: 768px) {
+  .layout-hero {
+    padding: 112px 16px;
+  }
   .layout-hero .layout-container {
     max-width: 768px;
-    padding: 112px 16px;
   }
 
   .layout-hero-heading {
@@ -249,9 +263,12 @@
 }
 /*----------------desktop-------------*/
 @media screen and (min-width: 1158px) {
+  .layout-hero {
+    padding: 188px 15px;
+  }
+
   .layout-hero .layout-container {
     max-width: 1158px;
-    padding: 188px 15px;
   }
 
   .layout-hero-heading {
@@ -265,13 +282,13 @@
 /* #region WHY US */
 .layout-why-us {
   margin: 0 auto;
+  padding: 96px 16px;
 }
 
 /* setting the content area of the container of the WHY US section */
 .layout-why-us .layout-container {
   max-width: 320px;
   margin: 0 auto;
-  padding: 96px 16px;
 }
 
 /* The elements will wrap depending depending on their breakpoint. This will be regulated by their width */
@@ -317,9 +334,12 @@
 /*------------desktop------------*/
 
 @media screen and (min-width: 1158px) {
+  .layout-why-us {
+    padding: 120px 15px;
+  }
+
   .layout-why-us .layout-container {
     max-width: 1158px;
-    padding: 120px 15px;
   }
 
   .layout-merit-points {
@@ -345,22 +365,26 @@
 
 /* #region TEAM */
 
-/*centers the container insidde the section */
+/*centers the container inside the section */
 .layout-team {
   margin: 0 auto;
+  padding: 96px 16px;
 }
 
 /* sets the content area */
 .layout-team .layout-container {
   max-width: 320px;
+  padding: 0 12px;
   margin: 0 auto;
-  padding: 96px 28px;
   text-align: center;
 }
 
+.layout-team .layout-card-group {
+  justify-content: center;
+}
 /* The width of each member card will depend on the resolution. Done for wrapping*/
 .layout-team .layout-box {
-  width: calc((100%) / 1);
+  width: 264px;
 }
 
 /* The layout of the area under the team member card photo */
@@ -397,7 +421,7 @@
 @media screen and (min-width: 768px) {
   .layout-team .layout-container {
     max-width: 768px;
-    padding: 96px 108px;
+    padding: 0 92px;
   }
 
   /*setting the team cards layout in tablet*/
@@ -406,27 +430,24 @@
     row-gap: 64px;
   }
   /* adjusting card width to ensure proper alignment in tablet*/
-  .layout-team .layout-box {
-    width: calc((100% - 24px) / 2);
-  }
 }
 
 /*--------------desktop------------------*/
 /* container layout*/
 @media screen and (min-width: 1158px) {
+  .layout-team {
+    padding: 120px 15px;
+  }
   .layout-team .layout-container {
     max-width: 1158px;
-    padding: 120px 15px;
+    padding: 0;
   }
 
   /*setting the team cards layout in desktop*/
   .layout-team .layout-card-group {
+    flex-wrap: nowrap;
+    flex-direction: row;
     gap: 24px;
-  }
-
-  /* adjusting card width to ensure proper alignment in desktop*/
-  .layout-team .layout-box {
-    width: calc((100% - 3 * 24px) / 4);
   }
 }
 
@@ -437,6 +458,7 @@
 /*centers the container insidde the section */
 .layout-portfolio {
   margin: 0 auto;
+  padding: 96px 16px;
 }
 
 /* the picture-slide*/
@@ -478,7 +500,6 @@
 .layout-portfolio .layout-container {
   max-width: 320px;
   margin: 0 auto;
-  padding: 96px 16px;
   text-align: center;
 }
 
@@ -505,9 +526,11 @@
 /*----------------desktop----------------*/
 
 @media screen and (min-width: 1158px) {
+  .layout-portfolio {
+    padding: 120px 15px;
+  }
   .layout-portfolio .layout-container {
     max-width: 1158px;
-    padding: 120px 15px;
   }
 
   .layout-portfolio .layout-card-group {
@@ -526,12 +549,12 @@
 /*centering the footer container*/
 .layout-footer {
   margin: 0 auto;
+  padding: 96px 16px;
 }
 
 /*--------------------mobile--------------*/
 .layout-footer .layout-container {
   max-width: 320px;
-  padding: 96px 16px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -609,9 +632,11 @@
 
 /*-------------------tablet--------------*/
 @media screen and (min-width: 768px) {
+  .layout-footer {
+    padding: 96px 108px;
+  }
   .layout-footer .layout-container {
     max-width: 768px;
-    padding: 96px 108px;
     justify-content: flex-start;
     column-gap: 24px;
     row-gap: 72px;
@@ -643,9 +668,12 @@
 
 /*-------------------desktop--------------*/
 @media screen and (min-width: 1158px) {
+  .layout-footer {
+    padding: 100px 15px;
+  }
   .layout-footer .layout-container {
     max-width: 1158px;
-    padding: 150px 15px;
+
     gap: 0; /*removing gap to set distancing manually via margins */
   }
 
